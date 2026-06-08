@@ -50,7 +50,7 @@ function AdminLayout() {
 
   return (
     <div
-      className="h-screen bg-background flex flex-col overflow-hidden"
+      className="min-h-screen bg-background flex flex-col"
       dir="rtl"
     >
       {/* Top Navbar */}
@@ -90,7 +90,7 @@ function AdminLayout() {
         </div>
       </header>
 
-      <div className="flex-1 flex min-h-0 overflow-hidden relative">
+      <div className="flex-1 flex min-h-0 relative">
         {/* Fixed sidebar */}
         <aside className="hidden md:flex w-64 flex-col border-l border-border bg-surface/20 backdrop-blur-md shrink-0">
           <nav className="flex-1 p-4 space-y-1">
@@ -119,9 +119,9 @@ function AdminLayout() {
           </div>
         </aside>
 
-        {/* Main content area - NO SCROLL */}
-        <main className="flex-1 h-full overflow-hidden relative p-6 lg:p-8 bg-surface/5">
-          <div className="h-full max-w-[1600px] mx-auto overflow-hidden">
+        {/* Main content area */}
+        <main className="flex-1 relative p-6 lg:p-8 bg-surface/5">
+          <div className="max-w-[1600px] mx-auto">
             <Outlet />
           </div>
         </main>
